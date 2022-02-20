@@ -1,0 +1,19 @@
+VPC= Virtual Private Cloud
+1 VPC belongs to 1 account and 1 region
+Two Types of VPC are available in a region
+	a) Default (Only one in a region). Less flexible. Can be deleted and recreated.
+	b) Custom VPC's (Multiple in a region). Configure according to your requirements. Configure everything by yourself. All things are private by default. Can be linked with other VPC's.
+	
+Default VPC:
+ --> Always configured in the same predictable way.
+ --> CIDR for default VPC is always the same 172.31.0.0/16
+ --> VPC is a region resilient service. VPC is made resilient by dividing the network into subnets.
+ --> One subnet in every availablity zone.
+
+
+
+ 
+
+
+
+

@@ -1,0 +1,15 @@
+High Availability: (Maximizing System Online Time)
+* A highly available system is one that provide services to end user as often as possible. If failure occur, the system can be brought live again with automation and replacement of component.
+* Highly available system does not mean that the user disruption will not happen when the server goes down. Swapping server may cause users to login again.
+* A highly available system can have Active-Pasive mode for redundnat servers.
+
+
+Fault Tolerance: (Operate through Failure)
+A system is fault tolerant if it continues to operate even some disruption occured, but it continue to provide service to it users.
+In fault tolerant system, Active-Active mode is required
+
+
+
+
+Disaster Recovery:
+

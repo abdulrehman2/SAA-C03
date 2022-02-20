@@ -1,0 +1,19 @@
+Region reilient service
+can be used to store data in Files,Audio,Video, text, large data sets
+file size can range from 0 bytes to 5TB
+Object in S3 have a key and value
+Bucket are containers for objects
+Bucket name is globally unique (for all re	gions and all accounts)
+Objects stored in S3 are in flat structure
+ * folder name is prefixed to the key of objects
+ * all files are stored in the root of bucket
+
+----------- Thnings to remember for Buckets
+* name is globally unique
+* name should be 3 to 63 characters, no underscores, all small letters
+* name should start with a letter or number
+* name cannot be set like IP address
+* 100 buckets per account (soft limit)
+* 1000 buckets per account (hard limit)
+
+Since you have a limit for number of buckets, you cannot have a seperate bucket for each user. For an application having thousands of users, folder stucture should be followed to cater storage needs

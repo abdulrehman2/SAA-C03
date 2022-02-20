@@ -1,0 +1,17 @@
+* Templates to create, update and delete infrastructure 
+YAML and JSON are both supported
+
+--> All templates has a list of resources (mandatory part)
+--> Description (provide details regarding template)
+--> AWSTemplateFormatVersion key is not mandatory, but if Description added then it should be right after AWSTemplateFormatVersion
+	(Trick Question in Exam)
+--> Metadata (Control the UI), how UI is presented in the console
+--> Parameters, prompt the user to provide more information, for example name of instance, type and size of instance	
+	Mappings, optional
+--> Conditions
+--> Outputs, return or display the items in the result screen.
+
+A templated will create a staack that will hold the logical resources, CF then create the physical resources based on the stack, and CF will make sure to sync the logical and physical resources. 
+If the stack is updated through the tempalte then the actual resources will be updated,
+If the stack is deleted then the CF will delete the actual resources
+

@@ -1,0 +1,53 @@
+--> Infastructure as a Service
+--> Provide Virtual Machines
+--> Private service by default. Since by default uses the default VPC, so 	 public IP is assigned to it by default,
+--> EC2 is Instance is Availability Zone resilient.
+--> Different sizes and capabilities are available.
+--> On Demand Billing  (per second or per hour) based on the software launched by the instance.
+--> Charges
+	a) for compute and memory.
+	b) for storage
+	c) for any commercial software is used in the instance
+
+--> Instance can have different kind of storages
+	a) Local on host storage
+	b) EBS (Elastic Block Storage). This is a network storage
+	
+--> Instance can have different states
+	a) Running 
+	b) Stopped
+	c) Terminated
+	
+	Running --> Stopped --> Running
+	Running --> Terminated (Instance will end)
+	
+	* Running state will generate charges for cpu, memory, storage and network
+	* Stopped state will generate charges for storage
+	* Terminated state will delete the instance and storage so no charges
+	
+--> IAM (Amazon Machine Image)
+	* can be used to create an EC2 instance
+	* can be created from an EC2 instance
+	* Similar to server image or a USB
+	* AMI have different properties like permission
+		a) Public (anyone can use it)
+		b) Implicit (Only Owner)
+		c) Explicit (specific AWS account are allowed to use the AMI)
+	* Have Root Volumne
+	* Block Device Mapping (map volumes to the device ID's)
+	
+--> Connecting to EC2 instances
+	*RDP (Remote Desktop protocol) for windows based machine , port 3389 is used for this
+	*SSH for linux instance. port 22 is used for this
+	*SSH key pair is used to authenticate the connection. Private part is downloaded and kept save. Public part is attached to the EC2 instance
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
