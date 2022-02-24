@@ -1,0 +1,68 @@
+S3 is private by default
+
+
+S3 Bucket Policy
+-A resource policy, attached to resource instead of identity
+-Identity policy are applicable inside an account
+-Resoruce policy are applicable on identities  for same account identities and other account identities
+--Allow/Deny (Anonymous) principals
+
+Bucket Policy
+-- An additional property exist for "Principal" to allow/deny identities
+-- Principal:"*" allow anyone inside AWS account, partner account and anoynomous user as well
+-- Bucket Policy should be used when need to grant access to anoynomous users
+-- Only One bucket policy can be applied to a bucket, however it can contain multiple statements.
+
+
+we can deny access to bucket by providing condition, for example if the source IP address is not  1.3.3.7/32, then deny the access
+
+{
+"Version":"2012-10-17",
+"Id":"BlockUnLeet",
+"Statement":[
+		{
+		"Sid":"IPAllow",
+		"Effect":"Deny",
+		"Principal":"*",
+		"Action":"s3:*",
+		"Resource":"arn:aws:s3:::secretproject/*",
+		Condition: {
+			"NotIpAddress":{"aws:SourceIp":"1.3.3.7/32"}
+			}
+		}
+	]
+}
+
+
+========ACLS (Access Control List)==============
+-Apply security to buckets and objects
+-These are subresources
+--They are legacy and AWS dont recommend to  use instead use Bucket Policy
+
+
+==========Block Public Access=========
+-Recently Added
+-Further Level of Security
+-Block Public Access Settings are applicable whathever is defined in Bucket Policy (Override the Bucket Policy)
+
+
+=========Key Points=============
+1) Not every Service provide Resource Policy, so Identity should be used wherver possible
+2) If permissions should be handle from single place then IAM is the way to go
+3) If S3 is used inside the account, then IAM
+4) For Anonymous and External identities use Bucket Policy
+5) Never use ACL's
+
+
+
+
+
+
+
+
+
+
+
+
+
+

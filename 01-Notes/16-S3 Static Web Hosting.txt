@@ -1,0 +1,19 @@
+Normal Access to AWS S3 is through API
+
+-Index and Error doucment are set.
+Website Endpoint is created 
+Endpoint name is created based on bucket name and AWS region
+Custom domain name can be used with Static Hosting, but domain name and bucket name should be same
+
+Scenarios for S3
+1) Offloading: Static media should be loaded from the S3 instead of compute(EC2) to save cost 
+2) Out-of-band Pages
+
+
+S3 Pricing
+- Price for storage
+- Price for data transfer out
+- Price for request data (get,post,put etc)
+
+
+

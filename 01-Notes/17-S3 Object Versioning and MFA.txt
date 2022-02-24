@@ -1,0 +1,24 @@
+Versioning
+--Enable at bucket level.
+--Once versioning is enabled, then it cannot be disabled
+--You can suspend versioning, but it can be enabled again
+--Name of object is the key,
+	Id=null means versioning is disabled
+	
+	Lastest version/Current version is the last object with version
+	
+Deletion is also affected by versioning
+-- if no version is specified, then S3 add a new marker to the current version and hides the previous versions
+-- if the object is undeleted, then all the previous versions are available again 
+
+
+Versions of an object can be deleted, and it will be hard delete
+
+if an object is deleted, then the most recent version becomes the (Current Version).
+
+
+MFA Delete 
+Once MFA enabled, delete any version will require OTP
+changing bucket versioning state (enable,suspend) require OTP
+
+Serial Number + MFC Code  need to be passed to API to perform deletion, and status update

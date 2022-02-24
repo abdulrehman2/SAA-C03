@@ -1,0 +1,9 @@
+Network and Permission are key players in identifying a service as public or private
+
+If the service is accesible from a public endpoint, then it is pubic
+
+
+Public (Internet) Zone 		AWS (Public) Zone						AWS (Private) Zone (VPC)
+							Connected to Public Internet			Private Services (EC2) are deployed here
+							S3 operate from here					Access to internet can be provided to VPC resources through Internet Gateway
+							

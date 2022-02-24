@@ -1,0 +1,47 @@
+Plaintext: data to encrypt
+Alogrithm: a complex program or mathemetical equation use to encrypt data
+Key: A password or some random string to encrypt the data
+CipherText: encrypted text, produced by using key,plaintext and algorithm
+
+
+==========Encryption at Rest===============
+when data is stored on laptop and single party is involved, then data can be encrypted using a key and then can be decrypted by providing the same key
+
+
+==========Encryption at Transit============
+When two or more parties are involved, then the transit of data need to encrypted, so that anyone stalking will see scrambled data.
+
+
+===========Symetric Encryption=============
+In symetric encryption, key is shared by both parties, and one party can send the data in encrypted form, while other can decrypt it using the shared private key.
+
+-Disadvantage (transfer of private key is risky and can be leaked)
+-Advantage (faster and less computation required than asymetric)
+
+
+===========Asymetric Encyption=============
+Party that needs to receive the data, will create a public and private key.
+Public key will be shared with the party that need to send encrypted data.
+Sending party  will encrypt the data using the public key
+Only Receiving party can decrypt the data using the private key.
+
+-Disadvantage (complex and require more computation)
+-Advantage (more secure)
+
+
+==================Signing======================
+Once receiving party receive the data, then they can send a OK message, but this message can be sent by anyone, so how to check whether it was send by the correct party.
+Receiving party will sign the ok message with private key, then it can only be decrypted by the public key available by the orignal sender
+
+
+
+
+
+
+
+
+
+
+
+
+

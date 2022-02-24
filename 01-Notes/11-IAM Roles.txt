@@ -1,0 +1,21 @@
+IAM Roles is an identity in AWS that will be used 
+	-when the principle is external user,
+	-An application/system need access to AWS resouces 
+	-when the number of users are greater than 5000
+	-when we don't know the actual number of users/principles needed access to AWS
+	
+	
+An IAM Role has a permission policy that list all the permissions and it has a trust policy.
+	-Permission policy list all the permissions
+	-Trust policy list all the users/principles that are allowed to assume that role
+	
+
+Once an identity assume that particular role, AWS will generate a temporary credentials that can be used to get access to the AWS resources.
+
+Scenarios where we can use IAM Role instead of IAM users
+
+	1) Mobile application with million of users, instead of using users, we can use Identity Federation, and allow users to login with Facebook/Twitter and these users can assume a particular role defined in the account
+	2) Lambda function running in AWS, instead of hardcoding access keys, we should allow the access through IAM role to a particular resource
+	3) Allow to use existing credentials in corporate environment for example using existing Active Directory credentials
+	
+	

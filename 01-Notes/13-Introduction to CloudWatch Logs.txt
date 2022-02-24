@@ -1,0 +1,18 @@
+*It is a regional service
+
+*Cloud watch logs is a service that will allow to store, monitor and access logging data
+	--Data can be sent to the service through 3 ways
+		a) Directly by AWS services, through IAM roles 
+		b) By installing AWS unified agent  on the server
+		c) By using development kit directly inside the application/system
+		
+*Logging sources produces the (Log Events). Log events will atleast have a timestamp and message, Cloud Watch Logs treats them as a raw data. These events are stored inside (LogStreams). 
+	--(Log Streams) are logs from the same source
+	--(Log Groups) are groups for log streams for same type of logs. Premission and retentions are defined at group level. And also metrics are set at this level
+
+
+*Metrics can be added on the logs, for example we can have metric filter to check failed requests to EC2 instance through SSH
+	--Metric is incremented whenever a condition is met for example (failed SSH try to EC2 Instance)
+	--Metrics can have alarms
+	
+	

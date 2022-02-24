@@ -1,0 +1,21 @@
+--Policies
+	*A policy is a JSON document, listing all the entitlements a user can have
+	*By default all resources are denyed for a user
+	*Explicit Deny, Explicit Allow, Implicit Deny (Clear rule for any resource access to an identity)
+	--Types of Policies
+		*Inline (Same policy can be applied to multiple users but change for every user is done seperatley)
+		*Managed (One policy can be applied to multiple users). Changing it will affect all the users.
+	
+--Users
+	*Whenver a human, application or a system neeed an access to aws, User identity is used.
+	*Only 5000 users can exist inside one AWS account (Hard Limit). So we need to think about during design whether to use IAM users for a    particular system if the no of users exceeds 5000, in that case identity federation is way to go
+	*A user can only belong to maximum 10 groups
+	
+--Groups
+	*Groups are containers for users
+	*Groups are not actual identities, they donot have username/password, and we cannot login with groups
+	*Groups cannot be used as a principal during assigning resource policies 
+	
+--Resource Policies
+	*Policies attached to resources instead of identities, and it  contains identities which can have access or restriction to these particular resources
+	

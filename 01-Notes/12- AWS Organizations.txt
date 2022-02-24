@@ -1,0 +1,10 @@
+
+AWS Organizations allow to  manage different AWS accounts from a single management account
+	-Existing Accounts can be added into organization, and upon accepting invitation, they become member accounts
+	-From management account we can role switch to other member accounts
+	-OrganizationAccountAccessRole will be created in the new accounts automatically, while for existing accounts we need to create them manually in the target account.
+	
+
+--Service Control Policies
+	*Allow or deny services available to different AWS organization member accounts
+	*By default everything is allowed by SCP

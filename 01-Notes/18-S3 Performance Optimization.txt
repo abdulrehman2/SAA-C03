@@ -1,0 +1,15 @@
+Single PUT Upload
+
+A single stream to upload the data to S3, unreliable internet connection will result in upload failure if the connection is disrupted
+
+
+Multipart Upload
+
+data is broken
+data should be 100mb or greater to use multipart upload 
+maximum 10000 (10 thousands) divisions can be done of the file, each part can range from 5mb to 5gb
+Last part can be smaller than 5Mb
+
+
+S3 Accelerated Transfer
+Suppose you need to upload data to S3 that is available in Region London, And your uploading data from Austrailia, then the long distance will slow down the upload and degrade the performance, so we can use Accelerated transfer to upload to edge location instead of region, and then edge location will directly communicate with region data center instead of taking internet route.

@@ -1,0 +1,13 @@
+ DNS is a discovery service
+ Translates human readable info to machine readable information and vice versa
+ DN Client===> laptop,your browser
+ DNS Resolver==> resolve the client query 
+ Zone==> A part of DNS database (amazon.com)
+ ZoneFile ==> physical database for a zone
+ NameServer (NS) ==> where zone files are Hosted
+ 
+ DNS Root
+	
+ 
+ 
+ 

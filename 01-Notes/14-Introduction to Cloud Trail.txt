@@ -1,0 +1,22 @@
+
+AWS CloudTrail is to monitor the activity in your AWS environment
+It is a Regional Service
+Log API calls for an AWS account
+Enable by default, and 90 days retention without any cost
+Management Events==> Creating/Deletion AWS resources
+Data Events===> objects like added in S3
+
+Single Region or All region trail (can be configured)
+Global services are mostly log the trail in North Virginia. 
+
+
+
+AWS CloudWatch monitors your AWS resources and applications, whereas CloudTrail monitors the activity in your AWS environment. For instance, with CloudWatch, you can scale your applications, whereas, with CloudTrail, you can see who did what to your applications.
+
+
+Key FACTS (For Exam)
+1) Enabled by default on AWS account. and 90 days trail are available
+2) Trails can be saved in S3 or CloudWatch Logs
+3) Management Events are trailed by default, for Data Events, need to enable seperately (Extra cost)
+4) All services by default log the trail in the same region, however IAM,STS,CloudFront log the data in US-East-1 (N-Virginia)
+5) Not Real Time, delays are there to data arrive in S3 or CloudWatchLog
