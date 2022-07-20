@@ -1,0 +1,30 @@
+What size the VPC be ?
+Need to 
+Predict the future
+
+
+
+
+
+1) DNS is available for VPC.
+IP Address + 2  is the DNS address 
+enableDNSHostname ==> this setting will set hostname for instances inside VPC
+enableDNSSupport ==> this setting will enable resolution of DNS in VPC
+
+
+Every subnet has 5 less address of total
+
+10.16.16.0/20
+Network address Start 10.16.16.0 
+Network address + 1   10.16.16.1 (for VPC Router)
+Network address + 2	  10.16.16.2 (for DNS)
+Network address + 3	  10.16.16.3 (Reserved for Future)
+Network address End	  10.16.31.3 (Reserved for Future)
+
+
+
+DHCP option is set for each subnet
+we can enable to auto assign public IP for every resource inside Subnet
+We can enable to auto assign IPv6 for every resource inside Subnet
+
+

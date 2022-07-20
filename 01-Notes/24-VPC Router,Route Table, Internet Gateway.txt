@@ -1,0 +1,29 @@
+============== VPC Router================
+
+Every VPC has a router, router is responsible for flowing of traffic from  and to VPC.
+Router has the address (Subnet Network address + 1)
+
+
+
+==============Route Table==============
+Each subnet has a route table, this table tells router how to flow traffic between subnets
+VPC has a "Main" route table, it is used when no route table is there for a subnet.
+
+In route table we have destination field, that contains either a single IP address or a range of IP addresses, whenever traffic flows, route table is used to check the destination, the higher the CIDR prefix, the higher the priority is given
+
+
+
+=================Internet Gateway=============
+Region resilient
+1 VPC can have 0 or 1 internet gateway
+IGW lies on AWS public zone, that will allow the traffic from outside to VPC
+
+Important: When an EC2 instance tries to talk to some service on Internet, the traffic is flown to IGW. IGW change the packet to set source as the Public IP and Destination as service IP, once the service returns the data, IGW again modify the packet with destination as private IP of EC2 instance
+
+
+
+=================Basiton Host/ Jumpbox=============
+ An instance in public subnet 
+ Incoming management connection arrive there
+ Then access internal VPC resources.
+ 

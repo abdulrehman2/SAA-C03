@@ -1,0 +1,37 @@
+S3 can have 2 types of Encryption
+	-Client Side Encryption
+	-Server Side Encryption
+	
+Encryption for S3 only means encryption at rest, during transit, data will be encrypted through TLS(HTTPS) for S3 endpoint
+
+
+============Client Side Encryption============
+--Data will be encrypted by the user, and will be sent in encrypted form to S3 and will be stored, AWS will not know what is the data.
+--User is responsible for decrypting the data as well
+
+
+===========Server Side Encryption=============
+There are 3 types of server side encryption available in S3
+
+1) SSE-C (Data and Key will be provided by the user to encrypt the data, key will be discarded, hash of key is saved along with data)
+	--For decryption, key shall be provided again
+	
+2) SSE-S3 
+	 Encryption and key to encrypt will be handled by S3,
+	 everytime an object is uploaded, a key is created from the master key to encrypt the data
+	 AES-256 algorithm is used to encrypt the data
+	 
+	--Advantages
+	1) No encryption overhead
+	
+	--Disadvantage
+	1) Keys are invisible
+	2) Can't rotate the keys
+	3) Role seperation is difficult to acheive (one role can only manage keys, while other can see the data)
+	
+	
+	
+	
+
+3) SSE-KMS (Encryption is handled by S3 using key stored in KMS)
+

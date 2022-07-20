@@ -1,0 +1,6 @@
+---5 Range of IP Address-----
+Class A (For Large Organzations)  range 10.0.0.0  to 127.255.255.255 (Total networks:128, Total Ips:16,777,216)
+Class B (For Medium Organzations) range 128.0.0.0 to 191.255.255.255 (Total networks:16,384, Total Ips:65,536)
+Class C			  range 192.0.0.0 to 223.255.255.255 (Total networks:16,384, Total Ips:256)
+Class D
+Class E 
